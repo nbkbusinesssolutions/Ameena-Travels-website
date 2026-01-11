@@ -239,7 +239,7 @@ const Fleet = () => {
           className="text-center mt-16"
         >
           <Link
-            to="/fleet"
+            to="/fleet#categories"
             className="btn-luxury-outline inline-flex items-center gap-2"
           >
             View Complete Fleet

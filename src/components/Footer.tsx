@@ -175,9 +175,22 @@ const Footer = () => {
 
         {/* Bottom Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-foreground/40 text-sm text-center sm:text-left">
-            © 2026 Ameena Travels. All Rights Reserved. (ameenatravels.online)
-          </p>
+          <div className="text-center sm:text-left">
+            <p className="text-foreground/40 text-sm">
+              © 2026 Ameena Travels. All Rights Reserved. (ameenatravels.online)
+            </p>
+            <p className="text-foreground/40 text-xs mt-1">
+              Designed & Developed by{" "}
+              <a
+                href="https://nbkbusinesssolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-gold-light transition-colors"
+              >
+                NBK Business Solutions
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-4 sm:gap-6">
             <a
               href="#"
