@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, MouseEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_DISPLAY, PHONE_TEL } from "@/lib/constants";
-import { handleAnchorNavigation } from "@/lib/smooth-scroll";
+import { handleAnchorNavigation, smoothScrollTo } from "@/lib/smooth-scroll";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +23,16 @@ const Navbar = () => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
+
+  const handleRouteNavigation = (
+    href: string,
+    event: MouseEvent<HTMLAnchorElement>
+  ) => {
+    if (href === "/fleet" && location.pathname === "/fleet") {
+      event.preventDefault();
+      smoothScrollTo("fleet-hero");
+    }
+  };
 
   const navLinks = [
     { name: "Home", href: "/", isRoute: true },
@@ -67,6 +77,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
+                  onClick={(event) => handleRouteNavigation(link.href, event)}
                   className="text-sm font-medium text-foreground/80 hover:text-gold transition-colors duration-300 tracking-wide uppercase"
                 >
                   {link.name}
@@ -133,7 +144,10 @@ const Navbar = () => {
                   <motion.div key={link.name}>
                     <Link
                       to={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(event) => {
+                        handleRouteNavigation(link.href, event);
+                        setIsMobileMenuOpen(false);
+                      }}
                       className="text-2xl font-heading text-foreground hover:text-gold transition-colors block"
                     >
                       <motion.span

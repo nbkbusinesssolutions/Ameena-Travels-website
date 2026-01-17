@@ -541,6 +541,13 @@ const FleetPage = () => {
   const headerRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true });
 
+  // Scroll to hero on initial render when no hash target is specified
+  useEffect(() => {
+    if (!window.location.hash) {
+      smoothScrollTo("fleet-hero");
+    }
+  }, []);
+
   // Update URL when category changes
   useEffect(() => {
     if (activeCategory === "all") {
@@ -595,7 +602,10 @@ const FleetPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-b from-midnight-light/50 to-background">
+      <section
+        id="fleet-hero"
+        className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-b from-midnight-light/50 to-background"
+      >
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             ref={headerRef}
