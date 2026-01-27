@@ -12,6 +12,7 @@ const Footer = () => {
     { name: "Wedding & Events", href: "/fleet?category=wedding#categories" },
     { name: "Self-Drive", href: "/fleet?category=selfdrive#categories" },
     { name: "Buses & Coaches", href: "/fleet?category=bus#categories" },
+    { name: "Bike Rentals", href: "/fleet?category=bike#categories" },
   ];
 
   const services = [
@@ -19,6 +20,7 @@ const Footer = () => {
     { name: "Self-Drive Cars", href: "/fleet?category=selfdrive#categories" },
     { name: "Airport Transfers", href: "/fleet?category=airport#categories" },
     { name: "Corporate Events", href: "/fleet?category=corporate#categories" },
+    { name: "Bike Rentals", href: "/fleet?category=bike#categories" },
     { name: "Group Transport", href: "/fleet?category=bus#categories" },
   ];
 
