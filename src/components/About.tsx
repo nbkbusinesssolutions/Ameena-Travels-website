@@ -33,7 +33,7 @@ const features = [
 
 const stats = [
   { value: "10+", label: "Years of Excellence" },
-  { value: "500+", label: "Happy Clients" },
+  { value: "1000+", label: "Happy Clients" },
   { value: "50+", label: "Premium Vehicles" },
   { value: "1000+", label: "Successful Trips" },
 ];
@@ -126,7 +126,7 @@ const About = () => {
                 ))}
               </div>
               <p className="text-foreground/60 text-sm">
-                Rated 4.9/5 by 500+ customers
+                Rated 4.9/5 by 1000+ customers
               </p>
             </div>
 

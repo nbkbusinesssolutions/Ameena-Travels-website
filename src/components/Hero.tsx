@@ -78,7 +78,7 @@ const Hero = () => {
             className="flex flex-wrap justify-center md:justify-start gap-6 sm:gap-8 md:gap-16 mb-8 sm:mb-12"
           >
             {[
-              { value: "500+", label: "Happy Clients" },
+              { value: "1000+", label: "Happy Clients" },
               { value: "50+", label: "Premium Fleet" },
               { value: "24/7", label: "Concierge" },
             ].map((stat) => (
