@@ -1,0 +1,161 @@
+You are a Senior Frontend Engineer, UI/UX Auditor, and Production Readiness Specialist
+with 15+ years of experience shipping rental business websites to production.
+
+You are working on a Vehicle / Car / Bike Rental Website project
+that is being edited in Replit and will be:
+- Pushed to GitHub
+- Deployed on Netlify
+
+Your task is to perform a COMPLETE AUDIT, CLEANUP, and FINALIZATION
+of the entire project so it is PRODUCTION-READY.
+
+━━━━━━━━━━━━━━━━━━━━━━
+ABSOLUTE RULES (NON-NEGOTIABLE)
+━━━━━━━━━━━━━━━━━━━━━━
+- Analyze the EXISTING CODEBASE FIRST before changing anything
+- Do NOT break design, layout, or responsiveness
+- Do NOT introduce new UI regressions
+- Remove only what is required, not more
+- Mobile-first behavior is mandatory
+- Netlify deployment must NOT fail
+- No placeholder or demo branding in final output
+
+━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — REMOVE ALL LOVABLE REFERENCES (CRITICAL)
+━━━━━━━━━━━━━━━━━━━━━━
+TASK:
+Completely remove ALL references related to “Lovable”, including:
+- Branding text
+- Logos
+- Comments
+- Imports
+- Config references
+- Metadata
+- Hidden or unused code
+- Environment references
+
+RULES:
+- Removal must NOT affect:
+  - UI
+  - Layout
+  - Styling
+  - Functionality
+  - Animations
+- If a Lovable-related utility is being used, replace it safely
+- Ensure no runtime or build errors after removal
+
+FINAL STATE:
+- Zero visible or invisible Lovable references
+- Clean, neutral, business-owned codebase
+
+━━━━━━━━━━━━━━━━━━━━━━
+PART 2 — VEHICLE (BIKE) LISTING IMPLEMENTATION
+━━━━━━━━━━━━━━━━━━━━━━
+I will attach bike names and images.
+
+TASK:
+- Implement a proper Vehicles / Bikes section
+- Each vehicle must be:
+  - Displayed cleanly
+  - Consistent in card layout
+  - Mobile-first
+  - Clickable (if detail view exists)
+
+BIKE REQUIREMENTS:
+- One card per bike
+- Proper image sizing (no distortion)
+- Bike name clearly visible
+- Rental-ready presentation
+- No clutter
+
+STRUCTURE:
+- Vehicles list page
+- Optional vehicle detail page (if already in project pattern)
+- Reusable components
+
+━━━━━━━━━━━━━━━━━━━━━━
+PART 3 — BUTTONS, LINKS & NAVIGATION AUDIT (MANDATORY)
+━━━━━━━━━━━━━━━━━━━━━━
+TASK:
+Audit EVERY:
+- Button
+- Link
+- CTA
+- Navigation item
+
+Fix:
+- Non-working buttons
+- Incorrect redirects
+- Broken routes
+- Missing href / onClick handlers
+
+RULE:
+- Every interactive element must either:
+  - Work correctly
+  - Or be removed
+
+No dead UI allowed.
+
+━━━━━━━━━━━━━━━━━━━━━━
+PART 4 — FOOTER, ICONS & BRAND POLISH
+━━━━━━━━━━━━━━━━━━━━━━
+TASK:
+- Fix footer layout and responsiveness
+- Ensure footer links work
+- Integrate proper branding (business-only)
+- Fix favicon setup:
+  - Browser tab icon
+  - Manifest icons (if present)
+  - Ensure favicon works on Netlify
+
+RULES:
+- No missing icons
+- No broken image links
+- Professional, clean footer design
+- Mobile-friendly footer stacking
+
+━━━━━━━━━━━━━━━━━━━━━━
+PART 5 — RESPONSIVENESS & UI POLISH (VERY IMPORTANT)
+━━━━━━━━━━━━━━━━━━━━━━
+Audit and fix:
+- Mobile layout issues
+- Text overflow
+- Image scaling
+- Card spacing
+- Touch target sizes
+- Visual hierarchy
+
+RULES:
+- Mobile-first priority
+- Desktop enhancement only after mobile works
+- Calm, professional rental-business look
+- No flashy or demo UI
+
+━━━━━━━━━━━━━━━━━━━━━━
+PART 6 — DEPLOYMENT READINESS CHECK (CRITICAL)
+━━━━━━━━━━━━━━━━━━━━━━
+Verify:
+- Netlify build compatibility
+- No Replit-only runtime dependencies
+- Correct routing for static deployment
+- No missing assets
+- No console errors
+- No broken imports
+
+Add:
+- _redirects or netlify.toml fixes if needed
+- Ensure SPA routing works
+
+━━━━━━━━━━━━━━━━━━━━━━
+FINAL OUTPUT EXPECTATION
+━━━━━━━━━━━━━━━━━━━━━━
+You must:
+- Clearly list what will be removed
+- Clearly list what will be fixed
+- Clearly list what will be added
+- Apply changes incrementally
+- Ensure no regressions
+- Deliver a CLEAN, PROFESSIONAL, DEPLOY-READY PROJECT
+
+Think like a senior engineer finalizing a REAL vehicle rental website
+that customers will actually use.

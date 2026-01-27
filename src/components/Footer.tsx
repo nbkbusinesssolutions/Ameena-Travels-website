@@ -192,18 +192,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center gap-4 sm:gap-6">
-            <a
-              href="#"
-              className="text-foreground/40 hover:text-gold transition-colors text-sm"
+            <button
+              onClick={() => handleAnchorNavigation("/#contact")}
+              className="text-foreground/40 hover:text-gold transition-colors text-sm bg-transparent border-none cursor-pointer"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-foreground/40 hover:text-gold transition-colors text-sm"
+            </button>
+            <button
+              onClick={() => handleAnchorNavigation("/#contact")}
+              className="text-foreground/40 hover:text-gold transition-colors text-sm bg-transparent border-none cursor-pointer"
             >
               Terms of Service
-            </a>
+            </button>
           </div>
         </div>
       </div>

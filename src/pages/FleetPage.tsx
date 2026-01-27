@@ -15,6 +15,7 @@ import {
   Plane,
   Building2,
   Phone,
+  Bike,
 } from "lucide-react";
 import { PHONE_NUMBER, PHONE_TEL } from "@/lib/constants";
 import { smoothScrollTo } from "@/lib/smooth-scroll";
@@ -22,6 +23,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { carImages } from "@/data/carImages";
+import { bikeImages } from "@/data/bikeImages";
 
 // ========== FLEET DATA ==========
 
@@ -29,7 +31,7 @@ interface Vehicle {
   id: string;
   name: string;
   variant?: string;
-  category: "wedding" | "selfdrive" | "bus" | "airport" | "corporate";
+  category: "wedding" | "selfdrive" | "bus" | "airport" | "corporate" | "bike";
   type: string;
   image: string;
   specs: {
@@ -344,6 +346,96 @@ const fleetData: Vehicle[] = [
     features: ["AC", "Mic System", "Team Outings"],
     description: "Comfortable transport for team events and corporate outings.",
   },
+
+  // ========== BIKES ==========
+  {
+    id: "bike-harley",
+    name: "Harley Davidson",
+    category: "bike",
+    type: "Cruiser",
+    image: bikeImages.harleyDavidson,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹5,000",
+    priceUnit: "/day",
+    description: "Iconic American cruiser for the ultimate road experience.",
+  },
+  {
+    id: "bike-ninja-zx10r",
+    name: "Kawasaki Ninja ZX-10R",
+    category: "bike",
+    type: "Superbike",
+    image: bikeImages.kawasakiNinjaZX10R,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹6,000",
+    priceUnit: "/day",
+    description: "Track-ready supersport with race-winning DNA.",
+  },
+  {
+    id: "bike-z800",
+    name: "Kawasaki Z800",
+    category: "bike",
+    type: "Naked Sport",
+    image: bikeImages.kawasakiZ800,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹4,500",
+    priceUnit: "/day",
+    description: "Aggressive naked styling with thrilling performance.",
+  },
+  {
+    id: "bike-z900",
+    name: "Kawasaki Z900",
+    category: "bike",
+    type: "Naked Sport",
+    image: bikeImages.kawasakiZ900,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹5,000",
+    priceUnit: "/day",
+    description: "Modern supernaked with explosive power delivery.",
+  },
+  {
+    id: "bike-ktm-rc390",
+    name: "KTM RC 390",
+    category: "bike",
+    type: "Sports",
+    image: bikeImages.ktmRC390,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹3,000",
+    priceUnit: "/day",
+    description: "Lightweight sportbike with razor-sharp handling.",
+  },
+  {
+    id: "bike-bullet-350",
+    name: "Royal Enfield Bullet 350",
+    category: "bike",
+    type: "Classic",
+    image: bikeImages.royalEnfieldBullet350,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹1,500",
+    priceUnit: "/day",
+    description: "The legendary thumper - timeless classic charm.",
+  },
+  {
+    id: "bike-gt650",
+    name: "Royal Enfield GT 650",
+    category: "bike",
+    type: "Cafe Racer",
+    image: bikeImages.royalEnfieldGT650,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹2,500",
+    priceUnit: "/day",
+    description: "Retro cafe racer with modern twin-cylinder power.",
+  },
+  {
+    id: "bike-hayabusa",
+    name: "Suzuki Hayabusa",
+    category: "bike",
+    type: "Hypersport",
+    image: bikeImages.suzukiHayabusa,
+    specs: { fuel: "Petrol", seats: 2, transmission: "Manual" },
+    priceFrom: "₹7,500",
+    priceUnit: "/day",
+    description: "The legendary falcon - ultimate speed and touring comfort.",
+  },
 ];
 
 // ========== CATEGORY CONFIG ==========
@@ -384,6 +476,12 @@ const categories = [
     icon: Building2,
     description: "Professional transport for business needs",
   },
+  {
+    id: "bike",
+    name: "Bikes",
+    icon: Bike,
+    description: "Premium motorcycles for adventure seekers",
+  },
 ];
 
 // ========== VEHICLE CARD COMPONENT ==========
@@ -412,6 +510,8 @@ const VehicleCard = ({
         ? "airport transfer"
         : vehicle.category === "corporate"
         ? "corporate travel"
+        : vehicle.category === "bike"
+        ? "a bike rental"
         : "self-drive"
     }`
   );
@@ -594,6 +694,7 @@ const FleetPage = () => {
       bus: fleetData.filter((v) => v.category === "bus").length,
       airport: fleetData.filter((v) => v.category === "airport").length,
       corporate: fleetData.filter((v) => v.category === "corporate").length,
+      bike: fleetData.filter((v) => v.category === "bike").length,
     };
   }, []);
 
