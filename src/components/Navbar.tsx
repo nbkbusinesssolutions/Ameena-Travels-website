@@ -97,7 +97,7 @@ const Navbar = () => {
           {/* CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <a
-              href={`tel:+${PHONE_NUMBER}`}
+              href={PHONE_TEL}
               className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors"
             >
               <Phone className="w-4 h-4" />

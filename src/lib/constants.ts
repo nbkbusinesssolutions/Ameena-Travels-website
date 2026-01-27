@@ -1,7 +1,7 @@
 // Phone number constants
 export const PHONE_NUMBER = "919392554899";
 export const PHONE_DISPLAY = "+91 93925 54899";
-export const PHONE_TEL = `+${PHONE_NUMBER}`;
+export const PHONE_TEL = `tel:+${PHONE_NUMBER}`;
 
 // Email constant
 export const EMAIL = "book@ameenatravels.online";
