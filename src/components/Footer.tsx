@@ -160,7 +160,7 @@ const Footer = () => {
               
               {/* WhatsApp CTA */}
               <a
-                href={`https://wa.me/${PHONE_NUMBER}?text=Hi, I'd like to book a vehicle`}
+                href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent("Hello Ameena Travels! 👋\n\nI'd like to book a vehicle. Please share more details.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 px-4 py-2.5 bg-[#25D366] text-white text-sm font-medium rounded-full hover:bg-[#20BD5A] transition-colors"

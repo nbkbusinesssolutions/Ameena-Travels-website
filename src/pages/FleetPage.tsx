@@ -501,9 +501,9 @@ const VehicleCard = ({
     : vehicle.name;
 
   const whatsappMessage = encodeURIComponent(
-    `Hi, I'm interested in booking the ${displayName} for ${
+    `Hello Ameena Travels! 👋\n\nI'm interested in booking the *${displayName}* for ${
       vehicle.category === "wedding"
-        ? "my event/wedding"
+        ? "my wedding/event"
         : vehicle.category === "bus"
         ? "group transport"
         : vehicle.category === "airport"
@@ -513,7 +513,7 @@ const VehicleCard = ({
         : vehicle.category === "bike"
         ? "a bike rental"
         : "self-drive"
-    }`
+    }.\n\nPlease share availability and pricing details.`
   );
 
   return (
@@ -847,7 +847,7 @@ const FleetPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`https://wa.me/${PHONE_NUMBER}?text=Hi, I need help finding a vehicle`}
+              href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent("Hello Ameena Travels! 👋\n\nI need help finding the right vehicle. Please assist me.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-luxury inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] border-[#25D366]"

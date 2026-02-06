@@ -112,7 +112,7 @@ const FleetCard = ({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="fleet-card pt-20"
+      className="fleet-card pt-24 sm:pt-28 md:pt-32"
     >
       {/* Floating Car Image */}
       <motion.div
@@ -135,7 +135,7 @@ const FleetCard = ({
       </motion.div>
 
       {/* Content */}
-      <div className="mt-8">
+      <div className="mt-4">
         <h3 className="font-heading text-xl text-foreground mb-4">
           {car.name}
         </h3>
@@ -176,7 +176,7 @@ const FleetCard = ({
 
           {/* WhatsApp Button - Slides up on hover */}
           <motion.a
-            href={`https://wa.me/${PHONE_NUMBER}?text=Hi, I'm interested in booking the ${car.name}`}
+            href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(`Hello Ameena Travels! 👋\n\nI'm interested in booking the *${car.name}*. Please share availability and pricing details.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ y: 20, opacity: 0 }}

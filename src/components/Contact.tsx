@@ -141,7 +141,7 @@ const Contact = () => {
 
             {/* WhatsApp CTA */}
             <motion.a
-              href={`https://wa.me/${PHONE_NUMBER}?text=Hi, I'm interested in booking a premium vehicle`}
+              href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent("Hello Ameena Travels! 👋\n\nI'm interested in booking a premium vehicle. Please share more details.")}`}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}

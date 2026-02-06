@@ -21,8 +21,8 @@ const Hero = () => {
     const categoryText = selectedCategory 
       ? `Category: ${selectedCategory}` 
       : "General inquiry";
-    const dateText = selectedDate ? `, Date: ${selectedDate}` : "";
-    const message = encodeURIComponent(`Hi, I'm interested in booking a vehicle.\n${categoryText}${dateText}`);
+    const dateText = selectedDate ? `\nPreferred Date: ${selectedDate}` : "";
+    const message = encodeURIComponent(`Hello Ameena Travels! 👋\n\nI'm interested in booking a vehicle.\n${categoryText}${dateText}\n\nPlease share availability and pricing details.`);
     window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, "_blank");
   };
 

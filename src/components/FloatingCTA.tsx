@@ -20,7 +20,7 @@ const FloatingCTA = () => {
 
       {/* WhatsApp Button */}
       <motion.a
-        href={`https://wa.me/${PHONE_NUMBER}?text=Hi, I'd like to book a vehicle`}
+        href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent("Hello Ameena Travels! 👋\n\nI'd like to book a vehicle. Please share more details.")}`}
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}
